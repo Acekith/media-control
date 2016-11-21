@@ -1,0 +1,4 @@
+flask
+flask-cors
+python 2.7.3
+
