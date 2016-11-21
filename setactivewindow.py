@@ -15,4 +15,6 @@ def setactivewindow( process ):
             print line
             print 'windowactivate input=' + hex(int(line.split(None,1)[0], 16))
             subprocess.check_output('xdotool windowactivate ' + hex(int(line.split(None,1)[0], 16)), shell=True).strip()
-            return;
+            return("success");
+        else:
+            return("process not started")
