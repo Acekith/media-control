@@ -6,7 +6,7 @@ $( "#steam" ).click(function() {
   var error = function(error) {
 	alert("An error happened");
   };
-  $.get( "http://127.0.0.1:5000/dashboard/switch/steam", success, error);
+  $.get( "/dashboard/switch/steam", success, error);
 });
 
 
