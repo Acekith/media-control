@@ -21,9 +21,11 @@ def startstuff(program):
 @app.route('/dashboard/switch/<process>')
 def setcurrentwindow(process):
     x = ['Wireshark', 'steam', 'kodi']
+
     if process in x:
         return setactivewindow(process)
     else:
         return 'I\'m sorry Dave, I\'m afraid I can\'t do that'
+
 if __name__ == '__main__':
-    app.run(debug =True)
+    app.run(debug =True, host='0.0.0.0')
