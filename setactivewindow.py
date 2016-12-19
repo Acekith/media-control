@@ -8,7 +8,6 @@ def setactivewindow( process ):
 
     active = subprocess.check_output(['wmctrl', '-lp'], env={'DISPLAY': ':0'})
 
-    print(active)
     activelines = active.splitlines()
     #activearray = []
 
@@ -19,5 +18,5 @@ def setactivewindow( process ):
             print 'windowactivate input=' + hex(int(line.split(None,1)[0], 16))
             subprocess.check_output('xdotool windowactivate ' + hex(int(line.split(None,1)[0], 16)), shell=True, env={'DISPLAY': ':0'}).strip()
             return("success");
-        else:
-            return("process not started")
+    else:
+        return("process not started")

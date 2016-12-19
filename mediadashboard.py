@@ -5,11 +5,9 @@ from setactivewindow import setactivewindow
 app = Flask(__name__)
 CORS(app)
 
-
-
 @app.route('/dashboard/start/<program>')
 def startstuff(program):
-    x = ['wireshark', 'steam', 'kodi']
+    x = ['google-chrome', 'Steam', 'Kodi']
     if program in x:
         if startprocess(program):
             return 'Started'
@@ -20,7 +18,7 @@ def startstuff(program):
 
 @app.route('/dashboard/switch/<process>')
 def setcurrentwindow(process):
-    x = ['Wireshark', 'steam', 'kodi']
+    x = ['google-chrome', 'Steam', 'Kodi']
 
     if process in x:
         return setactivewindow(process)
