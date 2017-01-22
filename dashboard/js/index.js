@@ -1,32 +1,19 @@
-$( "#steam" ).click(function() {
-  var success = function( data ) {
-    $( ".result" ).html( data );
-    alert( "Load was performed." );
-  };
-  var error = function(error) {
+var success = function( data ) {
+	console.log('hiiii', data);
+	$( ".result" ).html( data );
+};
+var error = function(error) {
 	alert("An error happened");
-  };
-  $.get( "/dashboard/switch/Steam", success, error);
+};
+
+$( "#steam" ).click(function() {
+  $.get( "http://localhost:5000/dashboard/switch/Steam").done(success).fail(error);
 });
 
 $( "#kodi" ).click(function() {
-  var success = function( data ) {
-    $( ".result" ).html( data );
-    alert( "Load was performed." );
-  };
-  var error = function(error) {
-	alert("An error happened");
-  };
-  $.get( "/dashboard/switch/Kodi", success, error);
+  $.get( "http://localhost:5000/dashboard/switch/Kodi").done(success).fail(error);
 });
 
 $( "#netflix" ).click(function() {
-  var success = function( data ) {
-    $( ".result" ).html( data );
-    alert( "Load was performed." );
-  };
-  var error = function(error) {
-	alert("An error happened");
-  };
-  $.get( "/dashboard/switch/google-chrome", success, error);
+  $.get( "http://localhost:5000/dashboard/switch/google-chrome").done(success).fail(error);
 });

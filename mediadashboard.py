@@ -7,23 +7,22 @@ CORS(app)
 
 @app.route('/dashboard/start/<program>')
 def startstuff(program):
-    x = ['google-chrome', 'Steam', 'Kodi']
+    x = ['google-chrome', 'steam', 'kodi']
     if program in x:
         if startprocess(program):
             return 'Started'
         else:
             return 'Already Running'
     else:
-        return 'I\'m sorry Dave, I\'m afraid I can\'t do that'
+        return 'Program_not_allowed'
 
 @app.route('/dashboard/switch/<process>')
 def setcurrentwindow(process):
-    x = ['google-chrome', 'Steam', 'Kodi']
-
+    x = ['google-chrome', 'Steam', 'Kodi', 'chromium']
     if process in x:
         return setactivewindow(process)
     else:
-        return 'I\'m sorry Dave, I\'m afraid I can\'t do that'
+        return 'error'
 
 if __name__ == '__main__':
     app.run(debug =True, host='0.0.0.0')
