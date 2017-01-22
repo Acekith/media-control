@@ -10,6 +10,6 @@ This serves as a home dashbord with remote control of a media server through a t
 
 - [x] Select and bring forward specified running windows to swap between programs
       EX) Kodi, Steam, Chrome/Netflix tabs
-- [ ] Start selected programs if they are not running
+- [x] Start selected programs if they are not running
 - [ ] fetch weather from forcast.io
 - [ ] display unique to-do lists

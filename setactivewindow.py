@@ -25,6 +25,10 @@ def setactivewindow( process ):
             print process + ' is running'
             return 'running'
         except:
+            if process == 'steam'
+                process == 'steam -bigpicture'
+            if process == 'google-chrome'
+                process == 'google-chrome https://www.netflix.com'
             subprocess.Popen(process + ' &', shell=True, env={'DISPLAY': ":0"})
             return 'launched'
 
