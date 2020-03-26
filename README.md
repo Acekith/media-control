@@ -13,3 +13,4 @@ This serves as a home dashbord with remote control of a media server through a t
 - [x] Start selected programs if they are not running
 - [ ] fetch weather from forcast.io
 - [ ] display unique to-do lists
+- [ ] test addition of item
